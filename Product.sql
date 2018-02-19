@@ -34,6 +34,7 @@ INSERT INTO product (lookupcode, count) VALUES (
      , 150)
 RETURNING id, createdon;
 
+CREATE TABLE Employee (id uuid NOT NULL primary key, firstName character varying(30) NOT NULL, lastName character varying(30) NOT NULL, employeeID character varying(30) NOT NULL, active boolean NOT NULL, classification character varying(30) NOT NULL, manager character varying(30), password character varying(30), createdOn timestamp without time zone NOT NULL DEFAULT now());
 --SELECT * FROM product;
 
 --DELETE FROM product;
